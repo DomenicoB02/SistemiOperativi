@@ -9,10 +9,9 @@ I vincoli che caratterizzano il problema produttore-consumatore con pool di buff
 
 In particolare, si gestisce il pool di buffer come coda circolare, in cui si impone la produzione di un valore in testa alla coda e la consumazione in coda.
 
-<p align="center">
+
 ![prod_cons_mult_buffer_coda_circolare](https://github.com/PacxeN/SistemiOperativi/assets/149240024/e4e41bc8-071c-4727-ab38-2f755cbb648a)
 
-</p>
 
 Il pool di buffer, gestito come coda circolare, è implementato attraverso la seguente struttura dati:
 
