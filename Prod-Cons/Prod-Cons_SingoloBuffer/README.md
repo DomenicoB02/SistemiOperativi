@@ -6,6 +6,7 @@ I vincoli che caratterizzano il problema produttore-consumatore a singolo buffer
 
 - Il produttore non può produrre un messaggio prima che qualche consumatore abbia letto il messaggio precedente.
 - Il consumatore non può prelevare alcun messaggio fino a che un produttore non l’abbia depositato.
+![prod_cons_single_buffer](https://github.com/PacxeN/SistemiOperativi/assets/149240024/d3b98d8c-f792-4ee1-8646-ee9e11a1e036)
 
 Per la sincronizzazione dei processi produttore e consumatore si utilizzano due semafori: 
 
