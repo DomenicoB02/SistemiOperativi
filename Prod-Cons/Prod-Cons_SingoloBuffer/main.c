@@ -39,7 +39,7 @@ int main() {
 
 // SEMAFORI COOPERAZIONE tra 1 prod e 1 cons: NO COMPETIZIONE
 // Inizializzazione dei semafori	
-	semctl(ds_sem, SPAZIO_DISPONIBILE, SETVAL, 1);	  // ad 1
+	semctl(ds_sem, SPAZIO_DISPONIBILE, SETVAL, 1); // ad 1
 	semctl(ds_sem, MESSAGGIO_DISPONIBILE, SETVAL, 0); // a 0
 
 // Creiamo due processi con la fork
