@@ -8,15 +8,12 @@
 #define MUTEX  3
 
 typedef long msg;
-
-            
+        
 typedef struct {
- 	  	 int numlettori;
- 	  	 int numscrittori;
- 	  	 msg messaggio;
+            int numlettori;
+            int numscrittori;
+            msg messaggio;
 } Buffer;
-
-
 
 void InizioLettura (int, Buffer*);
 void FineLettura(int, Buffer*);
