@@ -12,14 +12,11 @@
 #include "header.h"
 #include "semafori.h"
 
-//Procedure di inizio e fine lettura
-
 void InizioLettura(int sem, Buffer* buf){
 	
         Wait_Sem(sem, MUTEXL); //Indica ai lettori che sto iniziando a leggere, incremento
                                 // numlettori in mutua esclusione
         buf->numlettori = buf->numlettori + 1;
-
         if (buf->numlettori == 1) //se si tratta del primo lettore blocca gli scrittori
             Wait_Sem(sem, SYNCH);
 
