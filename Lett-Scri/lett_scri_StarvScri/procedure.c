@@ -10,11 +10,8 @@
 
 #include "header.h"
 #include "semafori.h"
-
 /*********PROCEDURE DI LETTURA E SCRITTURA*********/
-
 void InizioLettura(int sem, Buffer* buf){
-    
     Wait_Sem(sem, MUTEXL); //Indica ai lettori che sto iniziando a leggere, incremento
     // numlettori in mutua esclusione
     buf->numlettori = buf->numlettori + 1;
