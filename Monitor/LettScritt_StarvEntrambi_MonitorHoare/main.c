@@ -11,19 +11,16 @@
 
 #define NUM_LETTORI 3
 #define NUM_SCRITTORI 3
-
 #define LETTURE 3
 #define SCRITTURE 2
 
 int main() {
-
 	key_t chiave_shm = IPC_PRIVATE;
 	int id_shm = shmget( chiave_shm, sizeof(struct LettScritt), IPC_CREAT|0664);
 	if( id_shm < 0 ) {
 		perror("errore shm");
 		exit(1);
 	}
-
 	struct LettScritt * ls = shmat( id_shm, NULL, 0);
 	if( ls == (void*)-1 ) {
 		perror("errore shmat");
