@@ -12,10 +12,8 @@
 struct ProdCons {
 	int buffer[DIM];
 	int stato[DIM];
-
 	int numero_occupati;
 	int numero_liberi;
-
 	Monitor m;
 };
 
