@@ -26,7 +26,6 @@ int main() {
 		perror("errore shmat");
 		exit(1);
 	}
-
 	init_monitor( &(ls->m), 2 );
 	ls->numero_lettori = 0;
 	ls->numero_scrittori = 0;
@@ -71,7 +70,6 @@ int main() {
 	for(j=0; j<NUM_LETTORI+NUM_SCRITTORI; j++){
 		wait(NULL);
     }
-
 	remove_monitor( &(ls->m) );
 	shmctl( id_shm, IPC_RMID, 0);
 }
