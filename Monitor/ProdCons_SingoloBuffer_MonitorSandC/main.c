@@ -8,11 +8,8 @@
 #include <time.h>
 
 #include "procedure.h"
-
 #define NUM_PRODUTTORI 1
 #define NUM_CONSUMATORI 1
-
-
 int main() {
 	key_t chiave_shm = IPC_PRIVATE;
 	int id_shm = shmget( chiave_shm, sizeof(struct ProdCons), IPC_CREAT|0664);
