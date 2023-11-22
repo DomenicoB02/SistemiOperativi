@@ -141,7 +141,8 @@ void signal_condition(Monitor* M,int id_var){
 #endif
 
 #ifdef DEBUG_
-    printf("<%d> -Monitor- tentativo di signal; n.ro proc. in attesa sulla cond. n. %d = %d\n", getpid(), id_var,M->cond_counts[id_var]);
+    printf("<%d> -Monitor- tentativo di signal; n.ro proc. in attesa sulla cond. n. %d = %d\n"
+    , getpid(), id_var,M->cond_counts[id_var]);
 #endif     
 
 
