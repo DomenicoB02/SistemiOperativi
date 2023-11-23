@@ -11,10 +11,8 @@
 
 #define NUM_LETTORI 3
 #define NUM_SCRITTORI 3
-
 #define LETTURE 3
 #define SCRITTURE 2
-
 int main() {
 	key_t chiave_shm = IPC_PRIVATE;
 	int id_shm = shmget( chiave_shm, sizeof(struct LettScritt), IPC_CREAT|0664);
@@ -22,7 +20,6 @@ int main() {
 		perror("errore shm");
 		exit(1);
 	}
-
 	struct LettScritt * ls = shmat( id_shm, NULL, 0);
 	if( ls == (void*)-1 ) {
 		perror("errore shmat");
@@ -32,7 +29,6 @@ int main() {
 	init_monitor( &(ls->m), 2 );
 	ls->numero_lettori = 0;
 	ls->numero_scrittori = 0;
-
 	pid_t pid;
 	int j;
 	for(j=0; j<NUM_LETTORI; j++) {
@@ -66,13 +62,13 @@ int main() {
 				Scrivi(ls, valore);
 				sleep(2);
 			}
-			exit(0);
+		exit(0);
 		}
 	}
 
 	for(j=0; j<NUM_LETTORI+NUM_SCRITTORI; j++){
 		wait(NULL);
-    }
+    	}
 
 	remove_monitor( &(ls->m) );
 	shmctl( id_shm, IPC_RMID, 0);
