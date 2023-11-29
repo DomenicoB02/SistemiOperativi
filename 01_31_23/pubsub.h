@@ -14,9 +14,7 @@
 typedef struct {
 
     /* TBD: 
-        Definire la struttura del messaggio, includendo un topic (numerico)
-        e un valore (numerico)
-     */
+        Definire la struttura del messaggio, includendo un topic (numerico) e un valore (numerico)*/
     long topic;
     int val;
 
@@ -25,10 +23,7 @@ typedef struct {
 typedef struct {
 
     /* TBD: 
-        Definire la struttura del messaggio, 
-        includendo un topic (numerico)
-        e lo ID della coda su cui ricevere i messaggi
-     */
+        Definire la struttura del messaggio, includendo un topic (numerico) e lo ID della coda su cui ricevere i messaggi*/
     long topic;
     int coda_id;
 
