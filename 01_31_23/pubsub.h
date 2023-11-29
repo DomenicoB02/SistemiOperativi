@@ -11,13 +11,10 @@
 #define TOTALE_SUBSCRIBER (NUM_PUBLISHERS_PER_TOPIC * 2)
 #define TOTALE_MESSAGGI (NUM_PUBLISHERS_PER_TOPIC * 2 * NUM_MESSAGGI)
 
-
-
 typedef struct {
 
     /* TBD: 
-        Definire la struttura del messaggio, 
-        includendo un topic (numerico)
+        Definire la struttura del messaggio, includendo un topic (numerico)
         e un valore (numerico)
      */
     long topic;
