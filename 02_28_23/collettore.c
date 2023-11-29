@@ -20,7 +20,7 @@ void collettore(int id_collettore, int id_queue_collettore, int id_queue_server)
             messaggio_sensore m;
 
             /* TBD: Ricevere un messaggio da un sensore, con ricezione selettiva */
-            int ret=msgrcv(id_queue_collettore,&m,sizeof(messaggio_collettore)-sizeof(long), 0,0);
+            int ret=msgrcv(id_queue_collettore,&m,sizeof(messaggio_collettore)-sizeof(long), 1,0);
             if(ret<0){
                 perror("Errore");
                 exit(1);

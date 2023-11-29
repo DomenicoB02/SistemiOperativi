@@ -41,7 +41,7 @@ void server(int id_queue_server) {
             messaggio_collettore m;
 
             /* TBD: Ricevere un messaggio da un collettore, con ricezione selettiva */
-            int ret=msgrcv(id_queue_server,&m,sizeof(messaggio_collettore)-sizeof(long),0,0);
+            int ret=msgrcv(id_queue_server,&m,sizeof(messaggio_collettore)-sizeof(long),1,0);
             if(ret<0){
                 perror("Errore");
                 exit(1);
